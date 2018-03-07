@@ -1,0 +1,282 @@
+syntax = "proto3";
+
+package ProtoMsg;
+
+enum MSG {
+    Unknow = 0;
+    Login_Request = 1; // login
+    Login_Response = 2;
+    Logout_Request = 3; // logout
+    Logout_Response = 4;
+    Register_Request = 5; // register
+    Register_Response = 6;
+    Keepalive_Request = 7; // keepalive
+    Keepalive_Response = 8;
+    Send_Message_Request = 9;
+    Send_Message_Response = 10;
+    Message_Nofification = 11;
+    Welcome_Notification = 12;
+
+    Echo_Request = 13;
+    Other_Client_Notification = 14;
+
+    Cube_Operate_Request = 15;
+    Cube_Operate_Response = 16;
+
+    Scene_Change_Complete_Request = 17;
+    Scene_Change_Complete_Response = 18;
+
+    Cube_Create_Response = 19;
+    Cube_Delete_Response = 20;
+
+    Match_Begin_Request = 21;
+    Match_Begin_Response = 22;
+
+    Match_Complete_Request = 23;
+    Match_Complete_Response = 24;
+
+    Match_Cancel_Request = 25;
+    Match_Cancel_Response = 26;
+
+    Plane_Operate_Request = 27;
+    Plane_Operate_Response = 28;
+
+    Wave_Create_Response = 29;
+
+    Exit_Scene_Request = 30;
+    Exit_Scene_Response = 31;
+
+    Time_Sync_Request = 32;
+    Time_Sync_Response = 33;
+
+    Plane_Destroy_Request = 34;
+    Plane_Destroy_Response = 35;
+}
+
+// concrete message
+message LoginRequest {
+    string name = 1;
+    string password = 2;
+}
+
+message LoginResponse {
+    fixed32 result = 1;
+}
+
+message LogoutRequest {
+    string name = 1;
+}
+
+message LogoutResponse {
+    fixed32 result = 1;
+}
+
+message RegisterResquest {
+    string name = 1;
+    string password = 2;
+    string email = 3;
+    string phone = 4;
+}
+
+message RegisterResponse {
+    fixed32 result = 1;
+}
+
+message MessageNofification {
+
+}
+
+message WelcomeNotification {
+
+}
+
+message EchoRequest {
+    string msg = 1;
+}
+
+message OtherClientNotification {
+    string msg = 1;
+}
+
+message CubeOperateRequest {
+    float movement = 1;
+    float turn = 2;
+    fixed32 id = 3;
+    float x = 4;
+    float y = 5;
+    float z = 6;
+    fixed32 user_id = 7;
+    float angle = 8;
+}
+
+message CubeOperateResponse {
+    float movement = 1;
+    float turn = 2;
+    fixed32 id = 3;
+    float x = 4;
+    float y = 5;
+    float z = 6;
+    fixed32 user_id = 7;
+    float angle = 8;
+}
+
+message CubeCreateResponse {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+    fixed32 user_id = 4; // belong to user
+    fixed32 id = 5; // unique cube id
+    float angle = 6;
+}
+
+message CubeDeleteResponse {
+    fixed32 id = 1; // unique cube id
+    fixed32 user_id = 2; // belong to user
+}
+
+message SceneChangeCompleteRequest {
+    fixed32 id = 1;
+}
+
+message SceneChangeCompleteResponse {
+    fixed32 id = 1;
+}
+
+message MatchBeginRequest {
+    fixed32 id = 1;
+}
+
+message MatchBeginResponse {
+    fixed32 id = 1;
+}
+
+message MatchCancelRequest {
+    fixed32 id = 1;
+}
+
+message MatchCancelResponse {
+    fixed32 id = 1;
+}
+
+message MatchCompleteRequest {
+    fixed32 id = 1;
+    fixed32 other_user_id = 2;
+    fixed32 user_count = 3;
+}
+
+message MatchCompleteResponse {
+    fixed32 id = 1;
+    fixed32 other_user_id = 2;
+    fixed32 user_count = 3;
+}
+
+message PlaneOperateRequest {
+    float horizontal = 1;
+    float vertical = 2;
+    fixed32 fire = 3;
+    fixed32 user_id = 4;
+    fixed32 index_id = 5;
+    float x = 6;
+    float y = 7;
+    float z = 8;
+}
+
+message PlaneOperateResponse {
+    float horizontal = 1;
+    float vertical = 2;
+    fixed32 fire = 3;
+    fixed32 user_id = 4;
+    fixed32 index_id = 5;
+    float x = 6;
+    float y = 7;
+    float z = 8;
+}
+
+message WaveCreateResponse {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+    float angel = 4;
+    fixed32 type = 5;
+}
+
+message ExitSceneRequest {
+
+}
+
+message ExitSceneResponse {
+
+}
+
+message TimeSyncRequest {
+
+}
+
+message TimeSyncResponse {
+
+}
+
+message PlaneDestroyRequest {
+    fixed32 index_id = 1;
+}
+
+message PlaneDestroyResponse {
+    fixed32 index_id = 1;
+}
+
+// Message Type
+message Request {
+    LoginRequest login = 1;
+    LogoutRequest logout = 2;
+    RegisterResquest register = 3;
+    EchoRequest echo = 4;
+    CubeOperateRequest cube_operate = 5;
+    SceneChangeCompleteRequest scene_change_complete = 6;
+    MatchBeginRequest match_begin = 7;
+    MatchCompleteRequest match_complete = 8;
+    MatchCancelRequest match_cancel = 9;
+    PlaneOperateRequest plane_operate = 10;
+    ExitSceneRequest exit_scene = 11;
+    TimeSyncRequest time_sync = 12;
+    PlaneDestroyRequest plane_destroy = 13;
+}
+
+message Response {
+    LoginResponse login = 1;
+    LogoutResponse logout = 2;
+    RegisterResponse register = 3;
+    CubeOperateResponse cube_operate = 4;
+    SceneChangeCompleteResponse scene_change_complete = 5;
+    CubeCreateResponse cube_create_response = 6;
+    CubeDeleteResponse cube_delete_Response = 7;
+    MatchBeginResponse match_begin = 8;
+    MatchCompleteResponse match_complete = 9;
+    MatchCancelResponse match_cancel = 10;
+    PlaneOperateResponse plane_operate = 11;
+    WaveCreateResponse wave_create = 12;
+    ExitSceneResponse exit_scene = 13;
+    TimeSyncResponse time_sync = 14;
+    PlaneDestroyResponse plane_destroy = 15;
+}
+
+message Notification {
+    MessageNofification message = 1;
+    WelcomeNotification welcome = 2;
+    OtherClientNotification other_client = 3;
+}
+
+message Command {
+
+}
+
+// Base Message
+message Message {
+    MSG msg_type = 1;
+    fixed32 userid = 2;
+    fixed32 sequence = 3;
+    fixed32 session_id = 4;
+    int64 timestamp_ms = 5;
+    Request request = 6;
+    Response response = 7;
+    Notification notification = 8;
+}

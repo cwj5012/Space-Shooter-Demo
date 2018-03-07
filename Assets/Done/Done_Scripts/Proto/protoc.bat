@@ -1,0 +1,1 @@
+protoc.exe Message.proto --csharp_out=./
