@@ -22,7 +22,7 @@ user: 4 password 1
 user: 5 password 1
 ```
 
-Two player video demo, [download](https://pan.baidu.com/s/1vTO2k0_xZHP-vEZMSo6IJQ).
+Two player video demo, [download](https://pan.baidu.com/s/1DMAT2_R399IeNfvFNl_UdQ).
 
 ![](https://raw.githubusercontent.com/cwj5012/Space-Shooter-Demo/master/Docs/003mini.jpg)
 
