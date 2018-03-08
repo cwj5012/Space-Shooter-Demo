@@ -63,7 +63,7 @@ public class Done_PlayerController : MonoBehaviour {
         NetManager.plane_destroy += PlaneDestroyFunc1;
         ++plane_count;
 
-        speed = 10;
+        speed = 6;
 
         PlaneOperateRequest msg1 = new PlaneOperateRequest();
         msg1.X = players[plane_index].transform.position.x;

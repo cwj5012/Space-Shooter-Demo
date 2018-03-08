@@ -7,3 +7,7 @@ The demo is modify from Unity3D official demo [Space Shooter tutorial](https://u
 Unity3D version: 2017.2.0f3 (64-bit)
 
 .Net version: 4.6
+
+## Download
+
+The widnows version demo can download from baiduyun, link: https://pan.baidu.com/s/1JDPeVn2JRXfsqjH3ims0Kg
