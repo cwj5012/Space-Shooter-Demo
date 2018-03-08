@@ -123,9 +123,9 @@ public class NetManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
 
         Int32 port = 7000;
-        string server = "111.231.98.252";
-//        string server = "192.168.48.194";
-//        string server = "127.0.0.1";
+        // string server = "111.231.98.252";
+        // string server = "192.168.48.194";
+        string server = "127.0.0.1";
         client = new TcpClient(server, port);
         stream = client.GetStream();
 
