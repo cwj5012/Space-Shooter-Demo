@@ -11,3 +11,11 @@ Unity3D version: 2017.2.0f3 (64-bit)
 ## Download
 
 The widnows version demo can download from baiduyun, link: https://pan.baidu.com/s/1JDPeVn2JRXfsqjH3ims0Kg
+
+test user and password:
+
+user: 1 password 1
+user: 2 password 1
+user: 3 password 1
+user: 4 password 1
+user: 5 password 1
