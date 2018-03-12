@@ -10,7 +10,7 @@ Unity3D version: 2017.2.0f3 (64-bit)
 
 ## Download
 
-The widnows version demo can [download](https://pan.baidu.com/s/1JDPeVn2JRXfsqjH3ims0Kg) from baiduyun
+The widnows version demo can [download](https://pan.baidu.com/s/1_B5LR9LZ-5aqL6M01JwSMg) from baiduyun
 
 test user and password:
 
@@ -22,7 +22,7 @@ user: 4 password 1
 user: 5 password 1
 ```
 
-Two player video demo, [download](https://pan.baidu.com/s/1DMAT2_R399IeNfvFNl_UdQ).
+Two player video demo, [download](https://pan.baidu.com/s/1BeS_7cUJXqmvPo1m7wu_iA).
 
 ![](https://raw.githubusercontent.com/cwj5012/Space-Shooter-Demo/master/Docs/003mini.jpg)
 
